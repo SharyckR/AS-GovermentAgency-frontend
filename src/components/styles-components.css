@@ -1,0 +1,292 @@
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.heading-words {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.heading-words-2 {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.rectangle-container {
+    width: 750px;
+    height: 40px;
+    display: flex;
+    border-style: solid;
+    border-color: black;
+    border-top-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    margin-left: 100px;
+    margin-top: 30px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+}
+
+.rectangule-left {
+    flex: 1;
+    background-color: #808080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.rectangule-right {
+    flex: 2;
+    background-color: #696969;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 15px;
+}
+
+.rectangle-container-top {
+    width: 750px;
+    height: 40px;
+    display: flex;
+    border-style: solid;
+    border-color: black;
+    border-top-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    margin-left: 100px;
+    margin-top: 30px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+    border-top-left-radius: 25px; 
+    border-top-right-radius: 25px;
+}
+
+.rectangule-left-top {
+    flex: 1;
+    background-color: #808080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    border-top-left-radius: 20px; 
+}
+
+.rectangule-right-top {
+    flex: 2;
+    background-color: #696969;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 15px;
+    border-top-right-radius: 20px; 
+}
+
+.rectangle-container-bottom {
+    width: 750px;
+    height: 40px;
+    display: flex;
+    border-style: solid;
+    border-color: black;
+    border-top-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    margin-left: 100px;
+    margin-top: 30px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+    border-bottom-left-radius: 25px; 
+    border-bottom-right-radius: 25px;
+}
+
+.rectangule-left-bottom {
+    flex: 1;
+    background-color: #808080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom-left-radius: 20px;
+}
+
+.rectangule-right-bottom {
+    flex: 2;
+    background-color: #696969;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 15px;
+    border-bottom-right-radius: 20px;
+}
+
+.container-top-2 {
+    width: 400px;
+    height: 50px;
+    background-color: black;
+    border-radius: 20px 20px 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 250px;
+}
+
+.container-left {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.container-left-2 {
+    float: left;
+    padding: 10px;
+}
+
+.container-right {
+    float: right;
+    width: 30%;
+    position: relative; 
+    top: -60px;
+}
+
+.container-right-2 {
+    float: right;
+    position: relative; 
+    top: -60px;
+    right: 250px;
+}
+
+.container-information {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 30px 0 30px 0;
+    border-top-width: 2px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    margin-left: 320px;
+    margin-top: 100px;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.6);
+    float: left;
+    padding: 10px;
+}
+
+.container-top {
+    flex: 1;
+    background-color: black;
+    border-radius: 30px 0 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.container-bottom {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container-image {
+    max-width: 100%;
+    display: block;
+    border-top-left-radius: 25px; 
+    border-bottom-left-radius: 25px;
+    box-shadow: 20px 15px 15px rgba(0, 0, 0, 0.5); 
+    border-left: 3px solid grey;
+    border-top: 3px solid grey;
+}
+
+.container-right-2 {
+    float: right;
+    width: 30%;
+    padding: 50px;
+    margin-top: 60px;
+}
+
+.legal-image {
+    max-width: 100%;
+    display: block;
+    border-top-left-radius: 25px; 
+    border-bottom-left-radius: 25px;
+    box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.5); 
+    border-right: 5px solid white;
+    border-bottom: 5px solid white;
+}
+
+.transport-agency-image {
+    margin-top: 130px;
+    max-width: 100%;
+    display: block;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.vehicle-image {
+    max-width: 100%;
+    display: block;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    box-shadow: -20px 30px 10px rgba(0, 0, 0, 0.6);
+    margin-top: 50px;
+}
+
+.driving-image {
+    max-width: 100%;
+    display: block;
+    border-top-left-radius: 20px;
+    box-shadow: -20px 30px 10px rgba(0, 0, 0, 0.6);
+    margin-top: 50px;
+}
+
+.developers-container {
+    display: flex;
+    float: bottom;
+    width: 100%;
+    align-items: center;
+    margin-left: 15%;
+}
+
+.developer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 100px;
+}
+
+.information-developer {
+    width: 150px;
+    height: 150px;
+}

@@ -77,19 +77,17 @@
 
 }
 
-
 .container-left2 {
     float: left;
     width: 40%;
     padding: 50px;
 }
+
 .container-left22 {
     float: left;
     width: 40%;
     padding: 50px;
 }
-
-
 
 .container-right2 {
     float: right;
@@ -131,7 +129,7 @@
     border-bottom-left-radius: 25px;
     background-color: white; /* Color de fondo del cuadrado (puedes cambiarlo) */
     box-shadow: 20px 10px 10px rgba(5, 5, 5, 5); 
-  }
+}
 
 .healt-image {
     float: right;
@@ -143,8 +141,6 @@
     border-right: 5px solid black;
     border-bottom: 5px solid black;
 }
-
-
 
 .rectangle-container3 {
     width: 600px;

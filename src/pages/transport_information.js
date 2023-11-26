@@ -42,7 +42,7 @@ export default function TransportInformation() {
     };
 
     return (
-        <div>
+        <div style={{ padding: '0 0 60px 0', minHeight: '100vh' }}>
             <div className="rectangule-information"> Transport Information </div>
             <Box>
                 <Tabs 

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import './pages/styles-pages.css';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import ProtectedRoute from './components/utils/ProtectedRoutes';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HeaderApp from './components/header';
 import FooterApp from './components/footer';
 import Home from './pages/home';
@@ -14,13 +15,15 @@ import EducationalInformation from './pages/education_information';
 import HealthInformation from './pages/health_information';
 import TransportInformation from './pages/transport_information';
 import Register from './pages/register';
+import NotFound from './pages/not_found';
+import { useAuth } from './AuthContext';
 
 function App() {
-  const isSpaceVisible = window.location.pathname !== '/entry' && window.location.pathname !== '/register';
+  const { isAuthenticated } = useAuth();
 
   return (
     <Router>
-      <div>
+      <div style={{ overflow: 'hidden' }}>
         <HeaderApp />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -28,13 +31,18 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/entry" element={<Entry />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/id/basic-information" element={<BasicInformation />} />
-          <Route path="/id/legal-information" element={<LegalInformation />} />
-          <Route path="/id/educational-information" element={<EducationalInformation />} />
-          <Route path="/id/health-information" element={<HealthInformation />} />
-          <Route path="/id/transport-information" element={<TransportInformation />} />
+
+          <Route element={<ProtectedRoute canActivate={isAuthenticated} />}>
+            <Route path="/basic-information" element={<BasicInformation />} />
+            <Route path="/legal-information" element={<LegalInformation />} />
+            <Route path="/educational-information" element={<EducationalInformation />} />
+            <Route path="/health-information" element={<HealthInformation />} />
+            <Route path="/transport-information" element={<TransportInformation />} />
+          </Route>
+
+          <Route path="*" element={<NotFound />} />
         </Routes>
-        {isSpaceVisible && <div className="space-between"></div>}
+
         <FooterApp />
       </div>
     </Router>

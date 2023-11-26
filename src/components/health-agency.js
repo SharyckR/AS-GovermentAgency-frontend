@@ -1,45 +1,47 @@
 import { useEffect, useState } from 'react';
 import './styles-components.css';
 
-export default function LegalAgencyComponent () {
-    const [legalAgencies, setLegalAgencies] = useState([]);
+export default function HealthAgencyComponent() {
+    const [healthAgencies, setHealthAgencies] = useState([]);
     const [dniLogin , setDniLogin] = useState(localStorage.getItem("dniLogin")  ? localStorage.getItem("dniLogin")  : ''); 
 
     useEffect(() => {
-        const fetchLegalAgencies = async () => {
+        const fetchHealthhAgencies = async () => {
             try {
-                const response = await fetch('https://api-goverment-agency.onrender.com/agencies/legal-agencies', {
+                const response = await fetch('https://api-goverment-agency.onrender.com/agencies/health-agencies', {
                     headers: {
-                        Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNTgiLCJ0eXBlIjoiTGVnYWwgRW50aXR5Iiwic3VidHlwZSI6IkxlZ2FsIEFnZW5jeSIsImtleSI6IiQyYiQxMiR0YTQ3UzlDR2RFQUJKeHVKamVrd1JPL2pXTTAxcEFtNGxSTEpNOWFMcXdUWGo5QVRGcnhwVyIsImV4cCI6MTczMjQ4MTkyOX0.npIV38mr41r_fFwi4VThBebnzapG_So9P3YYGVANnLQ',
+                        Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzNjkiLCJ0eXBlIjoiTGVnYWwgRW50aXR5Iiwic3VidHlwZSI6IkhlYWx0aCBBZ2VuY3kiLCJrZXkiOiIkMmIkMTIkQzhEa0lLZ1hvbUkuUk5mUUQ3RGp1LmdLL2ZIQUxWdC5icTVweGovRTBURGZOMWRDMDdmeXUiLCJleHAiOjE3MzI0ODMwMzh9.UEaObTytb9TLL3QrpE_sTSQnBDaevd1wonpzw25TBP8',
                     },
                 });
                 const data = await response.json();
                 console.log(data);
-
-                const legalAgenciesArray = Array.isArray(data['Legal Agencies']) ? data['Legal Agencies'] : [];
-                setLegalAgencies(legalAgenciesArray);
-            } catch (error) {
-                console.error('Error fetching legal agencies:', error);
+                
+                const healthAgenciesArray = Array.isArray(data['Health Agencies']) ? data['Health Agencies'] : [];
+                setHealthAgencies(healthAgenciesArray);
+            } catch (error){
+                console.error('Error fetching health agencies', error);
             }
-        };
-        
-        fetchLegalAgencies();
+        }
+
+        fetchHealthhAgencies();
     }, []);
-    
+
     const dniToSearch = dniLogin;
 
-    const filteredAgency = legalAgencies.find((agency) => {
+    const filteredAgency = healthAgencies.find((agency) => {
         const firstPropertyKey = Object.keys(agency)[0];
         const agencyData = agency[firstPropertyKey].agency;
-        const caseHistories = agency[firstPropertyKey].case_histories;
+        const medicalHistories = agency[firstPropertyKey].medical_histories;
 
         return (
             agencyData.entity.type === 'Legal entity' &&
-            agencyData.entity.subtype === 'Legal Agency' &&
-            caseHistories &&
-            caseHistories.some((legalInfo) => Object.keys(legalInfo)[0] === String(dniToSearch))
+            agencyData.entity.subtype === 'Health Agency' &&
+            medicalHistories &&
+            medicalHistories.some((medicalHistory) => Object.keys(medicalHistory)[0] === String(dniToSearch))
         );
     });
+
+    console.log(filteredAgency);
     
     return (
         <div>
@@ -66,13 +68,14 @@ export default function LegalAgencyComponent () {
 
                     <div className="container-right">
                         <img
-                            src="https://img.freepik.com/fotos-premium/martillo-juez-abogados-justicia-que-tienen-reunion-equipo-bufete-abogados-conceptos-derecho-servicios-legales_265022-21654.jpg?w=360"
-                            alt="Legal"
-                            className="legal-image"
+                            src="https://oncenoticias.digital/wp-content/uploads/2022/01/COVID19.jpg"
+                            alt="Health"
+                            className="health-agency-image"
+                            style={{ width: '700px', height: '300px' }}
                         />
                     </div>
                 </div>
             )}
         </div>
     );
-};
+}

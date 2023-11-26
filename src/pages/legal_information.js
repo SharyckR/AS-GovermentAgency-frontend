@@ -9,11 +9,11 @@ export default function LegalInformation() {
     const [value, setValue] = useState(0);
 
     const handleChange = (event, newValue) => {
-        setValue(newValue);
+        setValue(newValue); 
     };
 
     return (
-        <div>
+        <div style={{ padding: '0 0 60px 0', minHeight: '100vh' }}>
             <div className="rectangule-information"> Legal Information </div>
             <Box>
                 <Tabs 

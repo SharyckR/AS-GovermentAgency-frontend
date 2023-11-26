@@ -3,6 +3,25 @@
     align-items: center;
 }
 
+.ovale{
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    height: 60px;
+    width: 300px;
+    margin-left: 350px;
+    display: flex;
+    gap: 5px;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.son-ovale{
+    color: white;
+}
+
 .logo {
     width: 120px;
     height: auto;
@@ -20,6 +39,12 @@
     color: black;
     font-size: 20px;
     text-decoration: none;
+}
+
+.container-background {
+    background-image: url('https://img.freepik.com/free-photo/education-day-arrangement-table-with-copy-space_23-2148721266.jpg?size=626&ext=jpg&ga=GA1.1.386372595.1698710400&semt=sph');
+    background-size: 100% 100%;
+    background-position: center;
 }
 
 .rectangle-container {
@@ -174,12 +199,12 @@
     float: right;
     position: relative; 
     top: -60px;
-    right: 250px;
+    right: 25%;
 }
 
 .container-information {
     width: 400px;
-    height: 400px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     border-style: solid;
@@ -189,8 +214,8 @@
     border-left-width: 2px;
     border-right-width: 2px;
     border-bottom-width: 2px;
-    margin-left: 320px;
-    margin-top: 100px;
+    margin-left: 300px;
+    margin-top: 50px;
     box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.6);
     float: left;
     padding: 10px;
@@ -231,8 +256,8 @@
 .container-right-2 {
     float: right;
     width: 30%;
-    padding: 50px;
-    margin-top: 60px;
+    margin-top: 120px;
+    margin-right: -50px;
 }
 
 .legal-image {
@@ -247,6 +272,26 @@
 
 .transport-agency-image {
     margin-top: 130px;
+    max-width: 100%;
+    display: block;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.health-agency-image {
+    margin-top: 130px;
+    margin-left: -30px;
+    max-width: 100%;
+    display: block;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.educational-agency-image {
+    margin-top: 130px;
+    margin-left: 30px;
     max-width: 100%;
     display: block;
     border-top-left-radius: 40px;
@@ -284,6 +329,7 @@
     flex-direction: column;
     align-items: center;
     margin: 0 100px;
+    margin-bottom: 200px;
 }
 
 .information-developer {

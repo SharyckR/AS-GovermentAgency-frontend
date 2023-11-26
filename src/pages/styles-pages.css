@@ -1,5 +1,47 @@
+.educational {
+    background-image: url('https://img.freepik.com/free-photo/education-day-arrangement-table-with-copy-space_23-2148721266.jpg?size=626&ext=jpg&ga=GA1.1.386372595.1698710400&semt=sph');
+    background-size: 100%;
+    background-position: center;
+    float: left;
+    width: 45%;
+    height: 100%;
+    background-color: grey;
+    padding: 50px;
+    border-radius: 8px;
+}
+
+.not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Cambia el color de fondo a tu elección */
+}
+
+.not-found-content {
+    text-align: center;
+}
+
+.not-found-content h1 {
+    font-size: 48px;
+    color: #333; /* Cambia el color del texto a tu elección */
+}
+
+.not-found-content p {
+    font-size: 18px;
+    color: #666; /* Cambia el color del texto a tu elección */
+}
+
+.container {
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    z-index: 10;
+    background-image: url('https://img.freepik.com/free-photo/education-day-arrangement-table-with-copy-space_23-2148721266.jpg?size=626&ext=jpg&ga=GA1.1.386372595.1698710400&semt=sph');
+}
+    
 
 .rectangule-information {
+    margin-top: 0px;
     width: 980px;
     height: 50px;
     background-color: #808080;
@@ -23,6 +65,7 @@
     height: 50px;
     background-color: #696969;
     border-style: solid;
+    margin-top: 0px;
     border-top-width: 0px;
     border-left-width: 0px;
     border-right-width: 5px;
@@ -40,20 +83,19 @@
     margin-top: 20%;
 }
 
-.root {
+.root-grey {
     display: flex;
     background-image: url('../images/fondo.png');
     background-size: cover;
     height: 100vh;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: -305px;
 }
 
-.container {
+.container-grey {
     float: left;
     width: 45%;
-    height: 613px;
+    height: 595px;
     background-color: grey;
     padding: 50px;
     border-radius: 8px;
@@ -143,6 +185,44 @@
 }
 
 .header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.black-rectangle-register {
+    width: 100%;
+    display: flex;
+    background-color: black;
+    background-size: cover;
+    height: 1000px;
+    align-items: center;
+    justify-content: center;
+}
+
+.grey-rectangle-register {
+    position: absolute;
+    width: 1000px;
+    height: 950px;
+    background-color: #696969;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.white-rectangle-register {
+    margin-top: 100px;
+    width: 600px;
+    height: 700px;
+    border: 2px dashed #a9a9a9;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-logo-register {
+    margin-top: -750px;
     display: flex;
     align-items: center;
 }

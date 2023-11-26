@@ -13,16 +13,13 @@ export default function AboutUs() {
                     <h1>About us</h1>
                 </div>
                 <div className='container-bottom'>
-                    <p> We are a government agency that encompasses 
-                        various agencies,  such as: health agencies, 
-                        security agencies, transportation agencies and 
-                        the country's education agencies. 
-                        Our main objective is to save and provide 
-                        information from the agencies where you are 
-                        as a citizen and keep your information safe 
-                        with our authentication system, so that you 
-                        do not worry about data manipulation without 
-                        your consent.
+                    <p> Our mission as a company is to develop and implement innovative solutions that overcome 
+                        existing barriers in government data management. We are committed to providing a platform 
+                        that efficiently integrates citizens' tax, health and other relevant information, allowing 
+                        secure and authorized access to improve the transparency, effectiveness and personalization 
+                        of government services. We work closely with agencies to simplify coordination across teams, 
+                        overcome the complexity of legacy systems, and provide a complete view of constituent needs 
+                        and interactions.
                     </p>
                 </div>
             </div>

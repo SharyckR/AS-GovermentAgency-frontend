@@ -5,7 +5,7 @@ import { Menu, MenuItem, Button, Icon } from '@mui/material';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 
 export default function DropdownMenu() {
-    const [ setSelectedValue ] = useState('');
+    const [selectedValue, setSelectedValue] = useState('');
     const [ anchorEl, setAnchorEl ] = useState(null);
     const open = Boolean(anchorEl);
 
@@ -41,10 +41,10 @@ export default function DropdownMenu() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <MenuItem onClick={() => handleMenuItemClick('basic')}><BasicInformationLink /></MenuItem>
-                <MenuItem onClick={() => handleMenuItemClick('legal')}><LegalInformationLink /></MenuItem>
-                <MenuItem onClick={() => handleMenuItemClick('transport')}><TransportInformationLink /></MenuItem>
-                <MenuItem onClick={() => handleMenuItemClick('health')}><HealthInformationLink /></MenuItem>
+                <MenuItem onClick={() => handleMenuItemClick('basic')}><BasicInformationLink/></MenuItem>
+                <MenuItem onClick={() => handleMenuItemClick('legal')}><LegalInformationLink/></MenuItem>
+                <MenuItem onClick={() => handleMenuItemClick('transport')}><TransportInformationLink/></MenuItem>
+                <MenuItem onClick={() => handleMenuItemClick('health')}><HealthInformationLink/></MenuItem>
                 <MenuItem onClick={() => handleMenuItemClick('educational')}><EducationalInformationLink /></MenuItem>
             </Menu>
         </div>

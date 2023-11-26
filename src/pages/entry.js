@@ -38,9 +38,13 @@ export default function Entry() {
         if (!response.ok) {
             const errorBody = await response.json();
             console.error('Error sending token:', errorBody);
+            alert('Usuario no encontrado, por favor, verifique su DNI');
+            setShowTokenInput(false);
         }else {
             localStorage.setItem("dniLogin", dniLogin);
             console.log('Bienvenido de nuevo' , dniLogin);
+            alert('Token enviado, por favor revise el correo subscrito');
+            setShowTokenInput(true);
         }
     };
     
@@ -53,13 +57,15 @@ export default function Entry() {
         });
     
         if (!response.ok) {
+            alert('Token incorrecto, por favor verifíquelo');
             throw new Error('Error verifying token');
+        }else {
+            alert('Token verificado, bienvenido');
         }
     };
 
     const handleTokenSend = async () => {
         await sendToken(dniLogin);
-        setShowTokenInput(true);
     };
     
     const handleTokenVerify = async () => {

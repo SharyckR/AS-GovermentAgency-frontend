@@ -65,7 +65,7 @@ export default function Entry() {
     };
 
     const handleTokenSend = async () => {
-        await sendToken(dniLogin);
+        await sendToken();
     };
     
     const handleTokenVerify = async () => {

@@ -79,6 +79,7 @@ export default function Register() {
             if (response.ok) {
                 const data = await response.json();
                 console.log('Registro exitoso:', data);
+                alert('Su registro ha sido exitoso. Al loguearse en la aplicación debe usar su DNI.');
             } else {
                 const errorMessage = await response.text();
                 console.error('Error en el registro:', response.status, errorMessage);

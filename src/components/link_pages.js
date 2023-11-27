@@ -19,11 +19,6 @@ export function SupportLink() {
     );
 }
 
-export function CloseSession(isAuthenticated){
-    isAuthenticated=false;
-    return <Link to="/" className="heading-words">Log out</Link>
-}
-
 export function EntryLink() {
     return (
         <Link to="/entry" className="heading-words">Login / Register</Link>

@@ -78,7 +78,7 @@ export default function LicenceInformationComponent() {
             </div>
             <div className="container-right">
                 <img
-                    src="http://cpbroker.com.co/wp-content/uploads/2021/05/WhatsApp-Image-2021-05-13-at-1.01.57-PM.jpeg"
+                    src="https://www.flotalamacarena.com/wp-content/uploads/2017/10/familia.jpg"
                     alt="Transport"
                     className="transport-agency-image"
                     style={{ width: '600px', height: '300px' }}
